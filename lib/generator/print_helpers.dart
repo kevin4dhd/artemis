@@ -530,7 +530,7 @@ Spec generateLibrarySpec(LibraryDefinition definition) {
 String specToString(Spec spec) {
   final emitter = DartEmitter();
   return DartFormatter(
-    languageVersion: DartFormatter.defaultLineLength,
+    languageVersion: DartFormatter.latestLanguageVersion,
   ).format(spec.accept(emitter).toString());
 }
 
